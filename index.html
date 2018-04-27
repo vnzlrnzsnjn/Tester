@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="Media/js/TimeCircles.js"></script>
+    <link rel="stylesheet" href="Media/css/TimeCircles.css">
+    <link rel="stylesheet" href="Media/css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700"rel="stylesheet">
+    <title>Get ready for Aiwa</title>
+</head>
+
+<body>
+
+    <div class="container-fluid align-items-center">
+        <div class="row">
+            <div class="col-12 col-md-7 col-lg-4 mid">
+                <img id="aiwalogo" class="fade-in" src="Media/imgs/Aiwa_Current_Logo.svg.png">
+                <p id="centertext">A legendary listening experience coming to you soon.</p>
+                <div id="siric"></div>
+                <div id="DateCountdown" data-date="2018-05-01 00:00:00"></div>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <script src="Media/js/siriwave.js"></script>
+    <script src="Media/js/index.js"></script>
+    
+        <script>
+        var SW = new SiriWave({
+            style: 'ios9',
+            width: 300,
+            height: 100,
+            speed: 0.04,
+            amplitude: 1,
+            container: document.getElementById('siric'),
+            autostart: true,
+
+        });
+
+    </script>
+    <script>
+        $("#DateCountdown").TimeCircles({
+            "animation": "smooth",
+            "bg_width": 1.4,
+            "fg_width": 0.01,
+            "circle_bg_color": "#fff0f1",
+            "time": {
+                "Days": {
+                    "text": "Days",
+                    "color": "#f44242",
+                    "show": true
+                },
+                "Hours": {
+                    "text": "Hours",
+                    "color": "#f44242",
+                    "show": true
+                },
+                "Minutes": {
+                    "text": "Minutes",
+                    "color": "#f44242",
+                    "show": true
+                },
+                "Seconds": {
+                    "text": "Seconds",
+                    "color": "#f44242",
+                    "show": true
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>
