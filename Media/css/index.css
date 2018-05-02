@@ -135,6 +135,10 @@ label{
     font-weight: 300;
 }
 
+.btn-sm{
+    padding:5px;
+}
+
 /*
 #panel,
         #flip {
