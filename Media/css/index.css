@@ -1,67 +1,325 @@
-body,html{
+body,
+html {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     overflow-x: hidden;
+    overflow-y: hidden;
+
 }
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 .fade-in {
-    opacity:0;  /* make things invisible upon start */
-    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-    -moz-animation:fadeIn ease-in 1;
-    animation:fadeIn ease-in 1;
-  
-    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
-  
-    -webkit-animation-duration:1s;
-    -moz-animation-duration:1s;
-    animation-duration:1s;
-  }
-.mid{
+    opacity: 0;
+    /* make things invisible upon start */
+    -webkit-animation: fadeIn ease-in 1;
+    /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode: forwards;
+    /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+@-webkit-keyframes fadeInItem {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
+.mid {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    font-size:1vw;
+    font-size: 1vw;
 }
-#DateCountdown{
-    height:auto;
-    width:auto;
+
+#DateCountdown {
+    height: auto;
+    width: auto;
 }
+
 #siric {
     width: 300px;
     height: 100px;
     display: block;
     margin: 30px auto;
-  }
+}
+
 #aiwalogo {
-    width:100%;
-    margin-bottom:10px;
+    width: 100%;
+    margin-bottom: 10px;
 }
-#centertext{
-    font-size:25px;
-    color:#f44242;
+
+#centertext {
+    font-size: 25px;
+    color: black;
 }
-.footer{
-    position: absolute;
+
+p {
+    /*
+    background: linear-gradient(to right, #f44e42, #ff9b9b, #f44e42);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+*/
+    color: black;
+    font-size: 1vw;
+}
+
+.btn{
+    padding:10px;
+    border-radius:2px;
+    margin:1vw;
+}
+
+.btn-outline-danger {
+    color: #f44242;
+    background-color: transparent;
+    background-image: none;
+    border-color: #f44242;
+}
+.btn-outline-danger:hover {
+    background-color: #f44242;
+
+    border-color: #f44242;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
     bottom: 0;
-    left: 20px;
-    font-size:15px;
+    left: 0;
+    z-index: -1;
+    background-color: #000;
+}
+label{
+    font-size:20px;
 }
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
+/*
+#panel,
+        #flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
+        #panel {
+            padding: 50px;
+            display: none;
+        }
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
+*/
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
+.products img {
+    position: absolute;
+    opacity: 0.5;
+    z-index: -2;
+    flex: auto;
+}
+
+.soundsystem {
+    top: 20%;
+    left: -15%;
+    width: 40%;
+}
+
+.earphone {
+    top: 75%;
+    left: 15%;
+}
+
+.headphone {
+    top: 80%;
+    left: 70%;
+}
+
+.television {
+    right: -18%;
+    top: 10%;
+    width: 40%;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .television {
+        display: none;
+
+    }
+    .earphone {
+        display: none;
+
+
+    }
+    .headphone {
+        display: none;
+
+    }
+    .soundsystem {
+        display: none
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .television {
+        right: -25%;
+        top: 20%;
+        width: 50%;
+    }
+    .earphone {
+        top: 70%;
+        left: -30%;
+    }
+    .headphone {
+        top: 80%;
+        left: 50%;
+    }
+    .soundsystem {
+        top: 20%;
+        left: -25%;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .television {
+        right: -35%;
+        top: 10%;
+        width: 50%;
+    }
+    .earphone {
+        top: 75%;
+        left: -10%;
+    }
+    .headphone {
+        top: 80%;
+        left:52%;
+    }
+    .soundsystem {
+        top: 20%;
+        left: -25%;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1180px) {
+    .television {
+        right: -35%;
+        top: 10%;
+        width: 50%;
+    }
+    .earphone {
+        top: 75%;
+        left: 5%;
+    }
+    .headphone {
+        top: 85%;
+        right: -15%;
+    }
+    .soundsystem {
+        top: 20%;
+        left: -25%;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .television {
+        right: -18%;
+        top: 10%;
+        width: 40%;
+    }
+    .earphone {
+        top: 65%;
+        left: 0%;
+    }
+    .headphone {
+        top: 70%;
+        left: 60%;
+    }
+    .soundsystem {
+        top: 10%;
+        left: -15%;
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    .television {
+        right: -18%;
+        top: 10%;
+        width: 40%;
+    }
+    .earphone {
+        top: 70%;
+        left: 10%;
+    }
+    .headphone {
+        top: 80%;
+        left: 70%;
+    }
+    .soundsystem {
+        top: 10%;
+        left: -15%;
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 2200px) {
+    .television {
+        right: -18%;
+        top: 5%;
+        width: 40%;
+    }
+    .earphone {
+        top: 75%;
+        left: 5%;
+    }
+    .headphone {
+        top: 80%;
+        left: 75%;
+    }
+    .soundsystem {
+        top: 10%;
+        left: -15%;
+        width: 40%;
+    }
+}
