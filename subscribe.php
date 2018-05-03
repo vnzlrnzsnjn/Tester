@@ -1,10 +1,14 @@
 <?php
-require 'config.php';
+$servername = 'localhost';
+$dbname = 'subscribers';
+$username = 'root';
+$password = 'Admin@12345';
 
-$name = $_POST['name'];
-$number = $_POST['countryCode'] . $_POST['contactNum'];
-$email = $_POST['email'];
-$message = $_POST['message'];
+        $name = $_POST['name'];
+        $number = $_POST['countryCode'] . $_POST['contactNum'];
+        $email = $_POST['email'];
+        $birthDay = $_POST['birthDay'];
+        $gender = $_POST['gender'];
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -21,27 +25,28 @@ try {
     if ($checkemail->rowCount() > 0) {
         echo "<SCRIPT type='text/javascript'> //not showing me this
     alert('Email Already Subscribed');
-    window.location.replace(\"index.html\");
+    window.location.replace(\"http:://localhost\");
     </SCRIPT>";
     } elseif ($checkcontact->rowCount() > 0) {
         echo "<SCRIPT type='text/javascript'> //not showing me this
     alert('Contact Number Already Used');
-    window.location.replace(\"index.html\");
+    window.location.replace(\"http:://localhost\");
     </SCRIPT>";
     } else {
-        $subscribe = $conn->prepare('INSERT INTO subscribers (name, number, email, message) 
-    VALUES (:name, :number, :email, :message)');
+        $subscribe = $conn->prepare('INSERT INTO subscribers (name, number, email, birthday, gender) 
+    VALUES (:name, :number, :email, :birthday, :gender)');
         $subscribe->bindParam(':name', $name);
         $subscribe->bindParam(':number', $number);
         $subscribe->bindParam(':email', $email);
-        $subscribe->bindParam(':message', $message);
+        $subscribe->bindParam(':birthday', $birthDay);
+        $subscribe->bindParam(':gender', $gender);
 
         //execute
         $subscribe->execute();
 
         echo "<SCRIPT type='text/javascript'> //not showing me this
     alert('Thank you for subscribing');
-    window.location.replace(\"index.html\");
+    window.location.replace(\"http:://localhost\");
     </SCRIPT>";
     }
 } catch (PDOException $e) {

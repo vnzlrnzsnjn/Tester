@@ -1,12 +1,15 @@
 body,
 html {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
     overflow-x: hidden;
     overflow-y: hidden;
 
 }
-
+h1,h2,h3,h4,h5,h6,p,button,a{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+}
 @-webkit-keyframes fadeIn {
     from {
         opacity: 0;
@@ -88,7 +91,7 @@ html {
 }
 
 #centertext {
-    font-size: 25px;
+    font-size: 23px;
     color: black;
 }
 textarea {
@@ -103,6 +106,10 @@ p {
 */
     color: black;
     font-size: 1vw;
+}
+
+#arrow{
+    margin:50px;
 }
 
 .btn{
@@ -133,30 +140,15 @@ p {
     background-color: #000;
 }
 label{
-    font-size:20px;
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
+    font-size:25px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    color:#f44242;
 }
 
 .btn-sm{
     padding:5px;
 }
-
-/*
-#panel,
-        #flip {
-            padding: 5px;
-            text-align: center;
-            background-color: #e5eecc;
-            border: solid 1px #c3c3c3;
-        }
-
-        #panel {
-            padding: 50px;
-            display: none;
-        }
-
-*/
 
 .products img {
     position: absolute;

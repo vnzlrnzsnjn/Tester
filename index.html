@@ -10,7 +10,7 @@
     <script src="Media/js/TimeCircles.js"></script>
     <link rel="stylesheet" href="Media/css/TimeCircles.css">
     <link rel="stylesheet" href="Media/css/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
     <link rel="icon" type="image/png" href="Media/imgs/favicon.ico">
     <title>Get ready for Aiwa</title>
 </head>
@@ -22,9 +22,9 @@
             <div class="col-12 col-md-7 col-lg-4 mid">
                 <div class="contents">
                     <img id="aiwalogo" class="fade-in" src="Media/imgs/Aiwa_Current_Logo.svg.png">
-                    <p id="centertext">A legendary listening experience coming to you soon.</p>
+                    <p id="centertext">The music staple of the 90’s, now making a comeback.</p>
                     <div id="siric"></div>
-                    <div id="DateCountdown" data-date="2018-05-10 12:00:00"></div>
+                    <div id="DateCountdown  " data-date="2018-05-10 12:00:00"></div>
                     <button class="btn btn-outline-danger" id="clickme">Subscribe</button>
                 </div>
                 <div id="div" class="align-middle">
@@ -270,9 +270,21 @@
                             </div>
 
                         </div>
-                        <div class="form-group">
-                            <label for="message">Message (Optional)</label>
-                            <textarea class="form-control" name="message" id="message" rows="2"></textarea>
+                        <div class="form-group row">
+                            <div class="col-6">
+                                <label for="bday">Birthday</label>
+                                <input class=" form-control" type="date" id="birthDay" name="birthDay" required>
+                            </div>
+
+                            <div class="form-group col-6">
+                                <label for="gender">Gender</label>
+                                <select id="gender" name="gender" class="form-control" required>
+                      <option selected></option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Others">Others</option>
+                    </select>
+                            </div>
                         </div>
                         <button id="clickme" type="submit" class="btn btn-outline-danger" onclick="ValidateEmail(document.form1.text1)">Subscribe</button>
                     </form>
@@ -287,7 +299,7 @@
         <img class="headphone item-fade-in" src="Media/imgs/headphone.jpg" />
         <img class="television item-fade-in" src="Media/imgs/television.png" />
     </div>
-    
+
     <!-- scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
@@ -334,9 +346,9 @@
         });
         $("#div").hide();
         $("#arrow").hide();
-        $("#clickme").click(function() {
+        $("#clickme").one('click', function() {
             $("#div").delay(700).slideToggle("slow", function() {
-                $( ".fullname" ).focus();
+                $(".fullname").focus();
             });
         });
         $("#clickme").click(function() {
@@ -347,8 +359,10 @@
             $("#div").fadeToggle("slow", function() {
                 $("#arrow").fadeOut("fast");
                 $(".contents").fadeIn("slow");
+                location.reload();
             });
         });
+
     </script>
 </body>
 
