@@ -24,7 +24,7 @@
                     <img id="aiwalogo" class="fade-in" src="Media/imgs/Aiwa_Current_Logo.svg.png">
                     <p id="centertext">The music staple of the 90’s, now making a comeback.</p>
                     <div id="siric"></div>
-                    <div id="DateCountdown  " data-date="2018-05-10 12:00:00"></div>
+                    <div id="DateCountdown" data-date="2018-05-10 12:00:00"></div>
                     <button class="btn btn-outline-danger" id="clickme">Subscribe</button>
                 </div>
                 <div id="div" class="align-middle">
@@ -306,16 +306,6 @@
     <script src="Media/js/siriwave.js"></script>
     <script src="Media/js/index.js"></script>
     <script>
-        var SW = new SiriWave({
-            style: 'ios9',
-            width: 300,
-            height: 100,
-            speed: 0.04,
-            amplitude: 1,
-            container: document.getElementById('siric'),
-            autostart: true,
-
-        });
         $("#DateCountdown").TimeCircles({
             "animation": "smooth",
             "bg_width": 0.9,
@@ -344,6 +334,20 @@
                 }
             }
         });
+
+    </script>
+    <script>
+        var SW = new SiriWave({
+            style: 'ios9',
+            width: 300,
+            height: 100,
+            speed: 0.04,
+            amplitude: 1,
+            container: document.getElementById('siric'),
+            autostart: true,
+
+        });
+
         $("#div").hide();
         $("#arrow").hide();
         $("#clickme").one('click', function() {

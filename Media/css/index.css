@@ -91,8 +91,9 @@ h1,h2,h3,h4,h5,h6,p,button,a{
 }
 
 #centertext {
-    font-size: 23px;
+    font-size: 24px;
     color: black;
+    pointer-events: none;
 }
 textarea {
     resize: none;
@@ -106,10 +107,6 @@ p {
 */
     color: black;
     font-size: 1vw;
-}
-
-#arrow{
-    margin:50px;
 }
 
 .btn{
