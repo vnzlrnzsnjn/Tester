@@ -91,6 +91,9 @@ html {
     font-size: 25px;
     color: black;
 }
+textarea {
+    resize: none;
+}
 
 p {
     /*
@@ -105,7 +108,7 @@ p {
 .btn{
     padding:10px;
     border-radius:2px;
-    margin:1vw;
+    margin:2vw;
 }
 
 .btn-outline-danger {

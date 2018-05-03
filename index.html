@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="Media/css/TimeCircles.css">
     <link rel="stylesheet" href="Media/css/index.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" type="image/png" href="Media/imgs/favicon.ico">
     <title>Get ready for Aiwa</title>
 </head>
@@ -42,7 +41,7 @@
                             <label for="countryCode">Contact Number</label>
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-sm-5">
+                                    <div class="col-4 col-sm-5">
                                         <select class="form-control" name="countryCode" id="countryCode">
                                     <option data-countryCode="PH" value="63">Philippines (+63)</option>
                                     <optgroup label="Other countries">
@@ -263,7 +262,7 @@
                                     </optgroup>
                                 </select>
                                     </div>
-                                    <div class="col-sm-7">
+                                    <div class="col-8 col-sm-7">
                                         <input type="text" class="form-control" name="contactNum" onkeypress='validate(event)' id="contactNum" placeholder="9XXXXXXXXX" maxlength="10" required>
                                     </div>
 
@@ -345,7 +344,7 @@
             $("#arrow").fadeIn("slow");
         });
         $("#arrow").click(function() {
-            $("#div").slideToggle("slow", function() {
+            $("#div").fadeToggle("slow", function() {
                 $("#arrow").fadeOut("fast");
                 $(".contents").fadeIn("slow");
             });
